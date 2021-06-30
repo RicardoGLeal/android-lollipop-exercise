@@ -7,7 +7,8 @@
         android:id="@+id/ivProfile"
         android:scaleType="centerCrop"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/contact_detail_image_height" />
+        android:layout_height="@dimen/contact_detail_image_height"
+        android:transitionName="ivProfile_tr"/>
 
     <RelativeLayout
         android:id="@+id/rlInfo"
@@ -16,10 +17,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
         <View
             android:id="@+id/vPalette"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:transitionName="vPalette_tr"/>
 
         <TextView
             android:id="@+id/tvName"
@@ -27,7 +30,8 @@
             android:textSize="@dimen/contact_text_size"
             android:textColor="@android:color/black"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:transitionName="tvName_tr"/>
 
         <TextView
             android:id="@+id/tvPhone"
@@ -39,6 +43,28 @@
             android:textColor="@android:color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+
     </RelativeLayout>
+
+    <FrameLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/framelayoudid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/ivProfile"
+        android:layout_marginTop="-50dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_call"
+            app:layout_anchor="@id/framelayoudid"
+            app:layout_anchorGravity="right"
+            app:fabSize="normal" />
+    </FrameLayout>
+
 </RelativeLayout>
 
